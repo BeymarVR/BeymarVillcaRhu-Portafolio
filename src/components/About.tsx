@@ -39,7 +39,7 @@ const About: React.FC = () => {
             <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                 <img
-                    src="src\assets\images\FotoBey.png"
+                    src="images\FotoBey.png"
                     alt="About me"
                     className="relative rounded-lg w-full object-cover"
                 />
