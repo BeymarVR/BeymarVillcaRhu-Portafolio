@@ -47,7 +47,7 @@ const About: React.FC = () => {
           </motion.div>
           <motion.div variants={itemVariants} className="md:col-span-3">
             <p className="text-gray-300 mb-6 leading-relaxed">
-              ¡Hola! Soy Beymar Jesus Villca Rhu un Ing. en Sistemas/Software que se quedo facinado con la programación por su capacidad para dar vida a las ideas. Mi trayectoria comenzó con un simple "¡Hola, mundo!" y desde entonces ha evolucionado hasta la creación de landing page, aplicaciones web simples o complejas, centradas en el usuario.
+              ¡Hola! Soy Beymar Jesus Villca Rhu engineering en Sistemas/Software que se quedo facinado con la programación por su capacidad para dar vida a las ideas. Mi trayectoria comenzó con un simple "¡Hola, mundo!" y desde entonces ha evolucionado hasta la creación de landing page, aplicaciones web simples o complejas, centradas en el usuario.
             </p>
             <p className="text-gray-300 mb-8 leading-relaxed">
               Cuando no estoy programando, me encontrarás jugando Voleibol o Bascket, si no es eso estare creando contenido variado en mis redes o entrenando en el gym o 
