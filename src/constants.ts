@@ -1,6 +1,14 @@
 
-import type { Project, SkillCategory } from './types';
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import {
+  FaGithub, FaInstagram, FaLinkedin, FaTwitter,
+  FaReact, FaVuejs, FaNodeJs, FaLaravel, FaPython, FaFigma, FaUnity,
+  FaTiktok,
+  FaFacebook
+} from 'react-icons/fa';
+import {
+  SiNextdotjs, SiTailwindcss, SiTypescript, SiDotnet, SiPostgresql,
+  SiVite, SiGodotengine
+} from 'react-icons/si';
 
 export const NAV_LINKS = [
   { name: 'Inicio', href: '#home' },
@@ -11,6 +19,14 @@ export const NAV_LINKS = [
 ];
 
 export const PROJECTS: Project[] = [
+  {
+    title: 'Landing Page para Kurama Gym',
+    description: 'Landing Page (intermedio) para Kurama Gym, con animaciones y efectos visuales.',
+    image: 'images/gym.png',
+    tags: ['Next.js', 'Tailwind CSS', 'React'],
+    demoUrl: '#',
+    codeUrl: 'https://github.com/BeymarVR/KumaraGym',
+  },
   {
     title: 'Sistema de Calificaciones',
     description: 'Sistema Web para la calificacion de las diferentes areas administrativas de la Universidad Franz Tamayo.',
@@ -35,7 +51,7 @@ export const PROJECTS: Project[] = [
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/PestamosSis',
   },
-   {
+  {
     title: 'Aplicacion Móvil EveryThing',
     description: 'Aplicacion movil para la creacion de tiendas virtuales con gestion de ventas y productos.',
     image: 'images/every.jpeg',
@@ -43,7 +59,7 @@ export const PROJECTS: Project[] = [
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/appEveryThing/',
   },
-{
+  {
     title: 'Sitio Web para el Mercado Lanza (CASEWEB)',
     description: 'Propuesta de sitio web para el Mercado Lanza (CASEWEB). Para gestionar productos y ventas en linea de los diferentes negocios.',
     image: 'images/caeweb.png',
@@ -53,9 +69,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Portafolio Web Personal',
-    description: 'Mi portafolio web personal para mostrar mis proyectos, habilidades y experiencia como desarrollador.',
+    description: 'Mi portafolio web personal (intermedio) para mostrar mis proyectos, habilidades y experiencia como desarrollador.',
     image: 'images/porta.png',
-    tags: ['TypeScript', 'JavaScript', 'XML'],
+    tags: ['TypeScript', 'React', 'Tailwind CSS'],
     demoUrl: '',
     codeUrl: '#',
   },
@@ -65,31 +81,31 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: 'Frontend',
     skills: [
-      { name: 'React', level: 95 },
-      { name: 'Vue.js', level: 80 },
-      { name: 'Angular', level: 70 },
-      { name: 'Tailwind CSS', level: 85 },
-      { name: 'TypeScript', level: 87 },
+      { name: 'React', level: 95, icon: FaReact },
+      { name: 'Next.js', level: 85, icon: SiNextdotjs },
+      { name: 'Vue.js', level: 80, icon: FaVuejs },
+      { name: 'Tailwind CSS', level: 85, icon: SiTailwindcss },
+      { name: 'TypeScript', level: 87, icon: SiTypescript },
     ],
   },
   {
     title: 'Backend',
     skills: [
-      { name: 'Laravel', level: 97 },
-      { name: 'Java', level: 74 },
-      { name: 'Python', level: 83 },
-      { name: 'ASP.NET(framework)', level: 80 },
-      { name: 'PostgreSQL', level: 70 },
+      { name: 'Laravel', level: 97, icon: FaLaravel },
+      { name: 'Node.js', level: 80, icon: FaNodeJs },
+      { name: 'Python', level: 83, icon: FaPython },
+      { name: 'ASP.NET', level: 80, icon: SiDotnet },
+      { name: 'PostgreSQL', level: 70, icon: SiPostgresql },
     ],
   },
   {
     title: 'Herramientas',
     skills: [
-      { name: 'Git & GitHub', level: 90 },
-      { name: 'Vite', level: 80 },
-      { name: 'Figma', level: 68 },
-      { name: 'Godot', level: 90 },
-      { name: 'Unity', level: 78 },
+      { name: 'Git & GitHub', level: 90, icon: FaGithub },
+      { name: 'Vite', level: 80, icon: SiVite },
+      { name: 'Figma', level: 68, icon: FaFigma },
+      { name: 'Godot', level: 90, icon: SiGodotengine },
+      { name: 'Unity', level: 78, icon: FaUnity },
     ],
   },
 ];
@@ -106,8 +122,18 @@ export const SOCIAL_LINKS = [
     icon: FaLinkedin,
   },
   {
-    name: 'Twitter',
+    name: 'Instagram',
     url: 'https://www.instagram.com/beymarvrg/',
     icon: FaInstagram,
+  },
+  {
+    name: 'TikTok',
+    url: 'https://www.tiktok.com/@beymarvrgamer',
+    icon: FaTiktok,
+  },
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/beymar.villcarhu/',
+    icon: FaFacebook,
   },
 ];

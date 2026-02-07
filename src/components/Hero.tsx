@@ -1,81 +1,68 @@
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-import { FaArrowRight } from 'react-icons/fa';
+export default function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLHeadingElement>(null);
 
-const Hero: React.FC = () => {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Intro Animation
+      gsap.from(textRef.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1.5,
+        ease: 'power4.out',
+        delay: 0.5,
+      });
+
+      // Scroll Parallax
+      gsap.to(textRef.current, {
+        y: -150,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-background z-0">
-             {/* Optional: Animated background particles can be added here */}
-        </div>
-      <div className="container mx-auto px-4 text-center md:text-left z-10">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Hola! Yo Soy <span className="text-primary">Beymar Villca Rhu</span>
-            </h1>
-            <div className="text-2xl md:text-4xl font-semibold mb-6 text-accent h-16 md:h-12">
-              <TypeAnimation
-                sequence={[
-                  'Desarrollador Web',
-                  2000,
-                  'Desarrollador en Apps Móviles Android',
-                  2000,
-                  'Marketing Digital',
-                  2000,
-                ]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              />
-            </div>
-            <p className="text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
-              Desarrollo aplicaciones web modernas y responsivas con especial atención a la experiencia del usuario y gestion del negocio.
-            </p>
-            <div className="flex justify-center md:justify-start space-x-4">
-              <motion.a
-                href="#projects"
-                className="bg-primary text-white font-semibold py-3 px-6 rounded-lg flex items-center gap-2"
-                whileHover={{ scale: 1.05, boxShadow: '0px 0px 8px rgb(16,185,129)' }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Ver Proyectos <FaArrowRight />
-              </motion.a>
-              <motion.a
-                href="#contact"
-                className="bg-transparent border-2 border-accent text-accent font-semibold py-3 px-6 rounded-lg"
-                whileHover={{ scale: 1.05, backgroundColor: '#F59E0B', color: '#111827' }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contactame
-              </motion.a>
-            </div>
-          </motion.div>
-          <motion.div
-            className="flex justify-center"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="relative w-72 h-72 md:w-96 md:h-96">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-2xl opacity-50"></div>
-                <img
-                src="images/fotodeperfil.jpg"
-                alt="Beymar Villca Rhu"
-                className="relative rounded-full w-full h-full object-cover border-4 border-primary"
-                />
-            </div>
-          </motion.div>
-        </div>
+    <section
+      ref={containerRef}
+      className="relative h-screen w-full flex items-center justify-center bg-black text-white overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 z-10" />
+
+      {/* Background Element */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="images/FotoBey.png"
+          alt="Background"
+          className="w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-neutral-900/80"></div>
+      </div>
+
+      <div className="relative z-20 text-center px-4">
+        <h1
+          ref={textRef}
+          className="text-5xl md:text-8xl font-bold tracking-tighter mix-blend-difference"
+        >
+          BEYMAR VILLCA RHU<br />
+          <span className="text-xl md:text-3xl font-light tracking-widest block mt-6 text-gray-400">
+            INGENIERO DE SISTEMAS / SOFTWARE / DESARROLLADOR WEB
+          </span>
+        </h1>
+        <p className="mt-8 text-xl md:text-2xl font-light text-green-500 animate-bounce">
+          Scrollear para explorar
+        </p>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}
