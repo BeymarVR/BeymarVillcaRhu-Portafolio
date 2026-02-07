@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sistema de Calificaciones',
     description: 'Sistema Web para la calificacion de las diferentes areas administrativas de la Universidad Franz Tamayo.',
-    image: 'src/assets/images/CALIFI.png',
+    image: 'images/CALIFI.png',
     tags: ['Laravel', 'Node.js', 'Vue.js', 'MySQL'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/Calificador_UNIFRANZ',
@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sitio Web de Noticias(ONT)',
     description: 'Pagina Web para la publicacion de Noticias, Estudios, Medios etc. Para el Observatorio Nacional del Trabajo(ONT).',
-    image: 'src/assets/images/ONT.png',
+    image: 'images/ONT.png',
     tags: ['Vue.js', 'Firebase', 'Tailwind CSS'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/SisOnt',
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sistema de MicroPrestamos',
     description: 'Sistema Web para la gestion de micro prestamos para una microempresa.',
-    image: 'src/assets/images/presta.png',
+    image: 'images/presta.png',
     tags: ['Laravel', 'PostgreSQL', 'Node.js', 'Tailwind CSS', 'Python'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/PestamosSis',
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
    {
     title: 'Aplicacion Móvil EveryThing',
     description: 'Aplicacion movil para la creacion de tiendas virtuales con gestion de ventas y productos.',
-    image: 'src/assets/images/every.jpeg',
+    image: 'images/every.jpeg',
     tags: ['Java', 'Firebase', 'XML'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/appEveryThing/',
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
 {
     title: 'Sitio Web para el Mercado Lanza (CASEWEB)',
     description: 'Propuesta de sitio web para el Mercado Lanza (CASEWEB). Para gestionar productos y ventas en linea de los diferentes negocios.',
-    image: 'src/assets/images/caeweb.png',
+    image: 'images/caeweb.png',
     tags: ['ASP.NET(framework)', 'Sql Server', 'Crystal Reports', 'Bootstrap'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarUNIFRANZ/ProyectoIntegrador-II-2024/tree/main/CASEWEB',
@@ -54,7 +54,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Portafolio Web Personal',
     description: 'Mi portafolio web personal para mostrar mis proyectos, habilidades y experiencia como desarrollador.',
-    image: 'src/assets/images/porta.png',
+    image: 'images/porta.png',
     tags: ['TypeScript', 'JavaScript', 'XML'],
     demoUrl: '',
     codeUrl: '#',

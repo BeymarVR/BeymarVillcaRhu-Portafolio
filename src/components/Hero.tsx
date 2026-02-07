@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
             <div className="relative w-72 h-72 md:w-96 md:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-2xl opacity-50"></div>
                 <img
-                src="src\assets\images\FotoBey.png"
+                src="images\fotodeperfil.png"
                 alt="Beymar Villca Rhu"
                 className="relative rounded-full w-full h-full object-cover border-4 border-primary"
                 />
