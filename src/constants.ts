@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Landing Page para Kurama Gym',
     description: 'Landing Page (intermedio) para Kurama Gym, con animaciones y efectos visuales.',
-    images: ['images/gym.png', 'images/GYM2.png'],
+    images: ['images/gym.png', 'images/GYM2.png', 'images/gym3.png', 'images/gym4.png'],
     tags: ['Next.js', 'Tailwind CSS', 'React'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/KumaraGym',
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Landing Page DT Brew House',
     description: 'Landing Page (Basico) para DT Brew House, con animaciones y efectos visuales.',
-    images: ['images/tari1.png', 'images/tari2.png', 'images/tari3.png', 'images/tari4.png'],
+    images: ['images/sabor1.png', 'images/sabotr2.png', 'images/sabor3.png'],
     tags: ['Next.js', 'Tailwind CSS', 'React'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/KumaraGym',
@@ -70,7 +70,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Aplicacion Móvil EveryThing',
     description: 'Aplicacion movil para la creacion de tiendas virtuales con gestion de ventas y productos.',
-    images: ['images/every.jpeg'],
+    images: ['images/every.jpeg', 'images/every2.jpeg', 'images/every3.jpeg'],
     tags: ['Java', 'Firebase', 'XML'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/appEveryThing/',
@@ -78,7 +78,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sitio Web para el Mercado Lanza (CASEWEB)',
     description: 'Propuesta de sitio web para el Mercado Lanza (CASEWEB). Para gestionar productos y ventas en linea de los diferentes negocios.',
-    images: ['images/caeweb.png'],
+    images: ['images/caeweb.png', 'images/sace2.png'],
     tags: ['ASP.NET(framework)', 'Sql Server', 'Crystal Reports', 'Bootstrap'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarUNIFRANZ/ProyectoIntegrador-II-2024/tree/main/CASEWEB',
