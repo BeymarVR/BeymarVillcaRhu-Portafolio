@@ -1,4 +1,4 @@
-
+import type { Project, SkillCategory } from './types';
 import {
   FaGithub, FaInstagram, FaLinkedin, FaTwitter,
   FaReact, FaVuejs, FaNodeJs, FaLaravel, FaPython, FaFigma, FaUnity,
@@ -20,9 +20,25 @@ export const NAV_LINKS = [
 
 export const PROJECTS: Project[] = [
   {
+    title: 'Landing Page TARI Rooftop Restaurant',
+    description: 'Landing Page (intermedio) para TARI Rooftop Restaurant, con animaciones y efectos visuales.',
+    images: ['images/tari1.png', 'images/tari2.png', 'images/tari3.png', 'images/tari4.png'],
+    tags: ['Next.js', 'Tailwind CSS', 'React'],
+    demoUrl: '#',
+    codeUrl: 'https://github.com/BeymarVR/KumaraGym',
+  },
+  {
     title: 'Landing Page para Kurama Gym',
     description: 'Landing Page (intermedio) para Kurama Gym, con animaciones y efectos visuales.',
-    image: 'images/gym.png',
+    images: ['images/gym.png', 'images/GYM2.png'],
+    tags: ['Next.js', 'Tailwind CSS', 'React'],
+    demoUrl: '#',
+    codeUrl: 'https://github.com/BeymarVR/KumaraGym',
+  },
+  {
+    title: 'Landing Page DT Brew House',
+    description: 'Landing Page (Basico) para DT Brew House, con animaciones y efectos visuales.',
+    images: ['images/tari1.png', 'images/tari2.png', 'images/tari3.png', 'images/tari4.png'],
     tags: ['Next.js', 'Tailwind CSS', 'React'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/KumaraGym',
@@ -30,7 +46,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sistema de Calificaciones',
     description: 'Sistema Web para la calificacion de las diferentes areas administrativas de la Universidad Franz Tamayo.',
-    image: 'images/CALIFI.png',
+    images: ['images/CALIFI.png', 'images/califi2.png'],
     tags: ['Laravel', 'Node.js', 'Vue.js', 'MySQL'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/Calificador_UNIFRANZ',
@@ -38,7 +54,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sitio Web de Noticias(ONT)',
     description: 'Pagina Web para la publicacion de Noticias, Estudios, Medios etc. Para el Observatorio Nacional del Trabajo(ONT).',
-    image: 'images/ONT.png',
+    images: ['images/ONT.png', 'images/ont2.png'],
     tags: ['Vue.js', 'Firebase', 'Tailwind CSS'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/SisOnt',
@@ -46,7 +62,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sistema de MicroPrestamos',
     description: 'Sistema Web para la gestion de micro prestamos para una microempresa.',
-    image: 'images/presta.png',
+    images: ['images/presta.png'],
     tags: ['Laravel', 'PostgreSQL', 'Node.js', 'Tailwind CSS', 'Python'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/PestamosSis',
@@ -54,7 +70,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Aplicacion Móvil EveryThing',
     description: 'Aplicacion movil para la creacion de tiendas virtuales con gestion de ventas y productos.',
-    image: 'images/every.jpeg',
+    images: ['images/every.jpeg'],
     tags: ['Java', 'Firebase', 'XML'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/appEveryThing/',
@@ -62,7 +78,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sitio Web para el Mercado Lanza (CASEWEB)',
     description: 'Propuesta de sitio web para el Mercado Lanza (CASEWEB). Para gestionar productos y ventas en linea de los diferentes negocios.',
-    image: 'images/caeweb.png',
+    images: ['images/caeweb.png'],
     tags: ['ASP.NET(framework)', 'Sql Server', 'Crystal Reports', 'Bootstrap'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarUNIFRANZ/ProyectoIntegrador-II-2024/tree/main/CASEWEB',
@@ -70,7 +86,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Portafolio Web Personal',
     description: 'Mi portafolio web personal (intermedio) para mostrar mis proyectos, habilidades y experiencia como desarrollador.',
-    image: 'images/porta.png',
+    images: ['images/portafolio1.png', 'images/portafolio2.png', 'images/portafolio3.png'],
     tags: ['TypeScript', 'React', 'Tailwind CSS'],
     demoUrl: '',
     codeUrl: '#',

@@ -12,8 +12,8 @@ const App: React.FC = () => {
       <main className="bg-neutral-950 min-h-screen text-white">
         <Hero />
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Contact />
       </main>
     </SmoothScroll>

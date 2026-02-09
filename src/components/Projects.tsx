@@ -1,87 +1,93 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'framer-motion';
 import { PROJECTS } from '../constants';
+import { FaGithub } from 'react-icons/fa';
+import ProjectImageCarousel from './ProjectImageCarousel';
 
 export default function Projects() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const sliderRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const totalWidth = sliderRef.current?.scrollWidth || 0;
-      const windowWidth = window.innerWidth;
-
-      if (totalWidth > windowWidth) {
-        gsap.to(sliderRef.current, {
-          x: () => -(totalWidth - windowWidth),
-          ease: 'none',
-          scrollTrigger: {
-            trigger: containerRef.current,
-            pin: true,
-            scrub: 1,
-            end: () => `+=${totalWidth}`,
-            invalidateOnRefresh: true,
-          },
-        });
-      }
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section ref={containerRef} className="h-screen w-full bg-neutral-950 text-white overflow-hidden flex items-center relative">
-      <div className="absolute top-10 left-10 z-10">
-        <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600">
-          PROYECTOS DESTACADOS
-        </h2>
-      </div>
-
-      <div ref={sliderRef} className="flex gap-10 px-10 items-center h-full pt-28">
-        {PROJECTS.map((project, i) => (
-          <div
-            key={i}
-            className="flex-shrink-0 w-[85vw] md:w-[60vw] h-[60vh] md:h-[70vh] bg-neutral-900 rounded-3xl overflow-hidden border border-neutral-800 flex flex-col group relative"
+    <section id="projects" className="py-24 bg-neutral-950 text-white px-4 md:px-10 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-20">
+          <motion.h2
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-neutral-100 via-neutral-400 to-neutral-700"
           >
-            {/* Image Background */}
-            <div className="absolute inset-0 z-0">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105 transform"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-            </div>
+            PROYECTOS<br />DESTACADOS
+          </motion.h2>
+          <div className="h-1 w-20 bg-white mt-4" />
+        </div>
 
-            {/* Content */}
-            <div className="relative z-10 p-8 h-full flex flex-col justify-end">
-              <h3 className="text-3xl md:text-5xl font-bold mb-4">{project.title}</h3>
-              <p className="text-lg text-gray-300 mb-6 line-clamp-3 md:line-clamp-none max-w-2xl">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tags.map(tag => (
-                  <span key={tag} className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-sm font-medium border border-white/20">
-                    {tag}
-                  </span>
-                ))}
+        <div className="flex flex-col gap-32">
+          {PROJECTS.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}
+            >
+              {/* Carousel Section */}
+              <div className="w-full lg:w-3/5 aspect-video bg-neutral-900 rounded-[2.5rem] overflow-hidden border border-neutral-800 shadow-2xl relative group">
+                <ProjectImageCarousel images={project.images} />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors pointer-events-none" />
               </div>
 
-              <a
-                href={project.codeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 self-start px-6 py-3 bg-white text-black font-bold rounded-full hover:bg-neutral-200 transition-colors"
-              >
-                Ver Código en GitHub
-              </a>
-            </div>
-          </div>
-        ))}
-        {/* Padding right */}
-        <div className="w-20 flex-shrink-0" />
+              {/* Content Section */}
+              <div className="w-full lg:w-2/5 flex flex-col justify-center">
+                <motion.span
+                  className="text-neutral-500 font-mono text-sm mb-4"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  0{index + 1} // PROYECTO
+                </motion.span>
+                <h3 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+                  {project.title}
+                </h3>
+                <p className="text-xl text-neutral-400 mb-8 leading-relaxed font-light max-w-xl">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-10">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-4 py-1.5 bg-neutral-900 rounded-full text-xs font-medium border border-neutral-800 text-neutral-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center gap-6">
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-bold rounded-2xl hover:bg-neutral-200 transition-all active:scale-95 shadow-[0_5px_15px_rgba(255,255,255,0.1)]"
+                  >
+                    <FaGithub className="text-xl" />
+                    <span>GitHub</span>
+                  </a>
+                  {project.demoUrl && project.demoUrl !== '#' && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-neutral-400 font-bold transition-colors underline underline-offset-8"
+                    >
+                      Demo en Vivo
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
