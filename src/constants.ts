@@ -19,14 +19,14 @@ export const NAV_LINKS = [
 ];
 
 export const PROJECTS: Project[] = [
-  // {
-  //   title: 'Landing Page TARI Rooftop Restaurant',
-  //   description: 'Landing Page (intermedio) para TARI Rooftop Restaurant, con animaciones y efectos visuales.',
-  //   images: ['images/tari1.png', 'images/tari2.png', 'images/tari3.png', 'images/tari4.png'],
-  //   tags: ['Next.js', 'Tailwind CSS', 'React'],
-  //   demoUrl: '#',
-  //   codeUrl: 'https://github.com/BeymarVR/KumaraGym',
-  // },
+  {
+    title: 'Landing Page TARI Rooftop Restaurant',
+    description: 'Landing Page (intermedio) para TARI Rooftop Restaurant, con animaciones y efectos visuales.',
+    images: ['images/tari1.png', 'images/tari2.png', 'images/tari3.png', 'images/tari4.png'],
+    tags: ['Next.js', 'Tailwind CSS', 'React'],
+    demoUrl: '#',
+    codeUrl: 'https://github.com/BeymarVR/KumaraGym',
+  },
   {
     title: 'Landing Page para Kurama Gym',
     description: 'Landing Page (intermedio) para Kurama Gym, con animaciones y efectos visuales.',
