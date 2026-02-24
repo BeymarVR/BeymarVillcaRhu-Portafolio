@@ -1,4 +1,4 @@
-import type { Project, SkillCategory } from './types';
+import type { Project, SkillCategory, Plan } from './types';
 import {
   FaGithub, FaInstagram, FaLinkedin, FaTwitter,
   FaReact, FaVuejs, FaNodeJs, FaLaravel, FaPython, FaFigma, FaUnity,
@@ -14,6 +14,7 @@ export const NAV_LINKS = [
   { name: 'Inicio', href: '#home' },
   { name: 'Sobre mi', href: '#about' },
   { name: 'Proyectos', href: '#projects' },
+  { name: 'Planes', href: '#planes' },
   { name: 'Habilidades', href: '#skills' },
   { name: 'Contacto', href: '#contact' },
 ];
@@ -43,18 +44,18 @@ export const PROJECTS: Project[] = [
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/KumaraGym',
   },
-  {
-    title: 'Sistema de Calificaciones',
-    description: 'Sistema Web para la calificacion de las diferentes areas administrativas de la Universidad Franz Tamayo.',
-    images: ['images/CALIFI.png', 'images/califi2.png'],
-    tags: ['Laravel', 'Node.js', 'Vue.js', 'MySQL'],
-    demoUrl: '#',
-    codeUrl: 'https://github.com/BeymarVR/Calificador_UNIFRANZ',
-  },
+  // {
+  //   title: 'Sistema de Calificaciones',
+  //   description: 'Sistema Web para la calificacion de las diferentes areas administrativas de la Universidad Franz Tamayo.',
+  //   images: ['images/CALIFI.png', 'images/califi2.png'],
+  //   tags: ['Laravel', 'Node.js', 'Vue.js', 'MySQL'],
+  //   demoUrl: '#',
+  //   codeUrl: 'https://github.com/BeymarVR/Calificador_UNIFRANZ',
+  // },
   {
     title: 'Sitio Web de Noticias(ONT)',
     description: 'Pagina Web para la publicacion de Noticias, Estudios, Medios etc. Para el Observatorio Nacional del Trabajo(ONT).',
-    images: ['images/ONT.png', 'images/ont2.png'],
+    images: ['images/loginont.png', 'images/ONT.png', 'images/ont2.png', 'images/sobreONT.png', 'images/perfilONT.png', 'images/dashONT.png', 'images/caruONT.png'],
     tags: ['Vue.js', 'Firebase', 'Tailwind CSS'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/SisOnt',
@@ -62,19 +63,19 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sistema de MicroPrestamos',
     description: 'Sistema Web para la gestion de micro prestamos para una microempresa.',
-    images: ['images/presta.png'],
+    images: ['images/presta.png', 'images/usuyo.png', 'images/presyo.png', 'images/soliyo.png', 'images/estayo.png'],
     tags: ['Laravel', 'PostgreSQL', 'Node.js', 'Tailwind CSS', 'Python'],
     demoUrl: '#',
     codeUrl: 'https://github.com/BeymarVR/PestamosSis',
   },
-  {
-    title: 'Aplicacion Móvil EveryThing',
-    description: 'Aplicacion movil para la creacion de tiendas virtuales con gestion de ventas y productos.',
-    images: ['images/every.jpeg', 'images/every2.jpeg', 'images/every3.jpeg'],
-    tags: ['Java', 'Firebase', 'XML'],
-    demoUrl: '#',
-    codeUrl: 'https://github.com/BeymarVR/appEveryThing/',
-  },
+  // {
+  //   title: 'Aplicacion Móvil EveryThing',
+  //   description: 'Aplicacion movil para la creacion de tiendas virtuales con gestion de ventas y productos.',
+  //   images: ['images/every.jpeg', 'images/every2.jpeg', 'images/every3.jpeg'],
+  //   tags: ['Java', 'Firebase', 'XML'],
+  //   demoUrl: '#',
+  //   codeUrl: 'https://github.com/BeymarVR/appEveryThing/',
+  // },
   {
     title: 'Sitio Web para el Mercado Lanza (CASEWEB)',
     description: 'Propuesta de sitio web para el Mercado Lanza (CASEWEB). Para gestionar productos y ventas en linea de los diferentes negocios.',
@@ -153,3 +154,103 @@ export const SOCIAL_LINKS = [
     icon: FaFacebook,
   },
 ];
+
+export const PLANS: Plan[] = [
+  {
+    title: 'Landing Page Básica',
+    subtitle: 'Perfecto para: pequeños negocios, emprendedores y profesionales que necesitan presencia online rápida.',
+    priceUsd: '120',
+    priceBs: '836',
+    includes: [
+      'Diseño web profesional básico',
+      'Hasta 5 secciones',
+      'Diseño responsivo (móvil, tablet y PC)',
+      'Dominio gratis por 1 año',
+      'Hosting por 1 año',
+      'Certificado SSL gratuito (https seguro)',
+      'Formulario de contacto o botón de WhatsApp',
+      'Carga rápida optimizada',
+      'Integración básica con redes sociales',
+
+    ],
+    recommended: 'En Oferta',
+    category: 'landing',
+    originalPriceUsd: '180',
+  },
+  {
+    title: 'Landing Page Pro',
+    subtitle: 'Perfecto para: negocios que quieren destacar, captar clientes y verse premium.',
+    priceUsd: '250',
+    priceBs: '1,740',
+    includes: [
+      'Diseño web moderno y personalizado',
+      'Animaciones avanzadas (scroll-driven animations)',
+      'Efectos visuales suaves y profesionales',
+      'Hasta 8 secciones dinámicas',
+      'Diseño 100% responsivo premium',
+      'Dominio gratis por 1 año',
+      'Hosting por 1 año',
+      'Certificado SSL gratuito',
+      'Formulario de contacto / WhatsApp',
+      'Google Analytics integrado',
+      'Optimización SEO básica',
+      'Galería de imágenes o videos',
+      'Optimización de velocidad',
+      'Soporte técnico básico (3 meses)',
+    ],
+    recommended: 'Más popular',
+    category: 'landing',
+  },
+  {
+    title: 'Sitio Web con Panel Básico',
+    subtitle: 'Perfecto para: empresas que necesitan administrar contenido sin conocimientos técnicos.',
+    priceUsd: '330',
+    priceBs: '2,297',
+    includes: [
+      'Diseño web personalizado',
+      'Sistema de login (admin)',
+      'Panel administrativo básico',
+      'Gestión de contenido (CRUD básico)',
+      'Subida y cambio de imágenes',
+      'Gestión de textos principales',
+      'Diseño responsivo',
+      'Dominio por 1 año',
+      'Hosting por 1 año',
+      'Certificado SSL',
+      'Google Analytics básico',
+      'Soporte técnico 3 meses',
+    ],
+    recommended: 'Más solicitado',
+    category: 'system',
+
+  },
+  {
+    title: 'Aplicación Web Completa',
+    subtitle: 'Perfecto para: empresas que necesitan un sistema a medida, automatización y escalabilidad.',
+    priceUsd: '700',
+    priceBs: '4,872',
+    includes: [
+      'Diseño UI/UX profesional personalizado',
+      'Desarrollo a medida según requerimientos',
+      'Múltiples roles de usuario',
+      'Panel administrativo avanzado',
+      'CRUD completo y módulos personalizados',
+      'Reportes y estadísticas',
+      'Búsquedas y filtros avanzados',
+      'Gestión multimedia completa',
+      'Diseño totalmente responsivo',
+      'Optimización de rendimiento',
+      'Seguridad reforzada',
+      'Dominio + Hosting por 1 año',
+      'Google Analytics avanzado',
+      'Soporte técnico 6 meses',
+      'Escalable para futuras mejoras',
+    ],
+
+    category: 'system',
+
+  },
+];
+
+export const WHATSAPP_NUMBER = "+59175254640";
+

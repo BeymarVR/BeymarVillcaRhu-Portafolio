@@ -18,3 +18,14 @@ export interface SkillCategory {
   title: string;
   skills: Skill[];
 }
+export interface Plan {
+  title: string;
+  subtitle: string;
+  priceUsd: string;
+  priceBs: string;
+  includes: string[];
+  recommended?: string;
+  category: 'landing' | 'system';
+  techSpecs?: string[];
+  originalPriceUsd?: string;
+}
